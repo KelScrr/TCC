@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+body {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(Fundo-Login2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+.container-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f0c60d;
+}
+
+.button {
+    width: 350px;
+    height: 100px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 25px;
+    background-color: black;
+    color: #f0c60d;
+    border: 3px solid #f0c60d;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+i {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.button:hover {
+    filter: sepia(100%);
+    filter: sepia(100%);
+    transition: 0.4s;
+    transform: scale(1.04);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 420px) {
+    .button-container {
+        padding: 10px;
+    }
+
+    .container-title {
+        font-size: 24px;
+    }
+
+    .button {
+        font-size: 25px;
+        padding: 8px;
+        width: 300px;
+        height: 100px;
+    }
+
+    .button-container {
+        width: 90%;
+    }
+
+    i {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .container-title {
+        font-size: 23px;
+    }
+
+    .button {
+        font-size: 21px;
+        padding: 8px;
+        width: 260px;
+        height: 100px;
+    }
+
+    .button-container {
+        width: 90%;
+    }
+
+    i {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .container-title {
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 17px;
+        padding: 8px;
+        width: 200px;
+        height: 100px;
+    }
+
+    .button-container {
+        width: 90%;
+    }
+
+    i {
+        font-size: 17px;
+    }
+}
+
