@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Área do Proprietário</title>
+</head>
+
+<body>
+
+  <form id="loginForm" action="action_page.php" method="post" onsubmit="return validateLogin()">
+    <div class="container">
+
+      <div class="logodiv">
+        <h1 class="logo">Baratão da Moda</h1>
+      </div>
+
+      <h2>Área do Proprietário</h2>
+
+      <div class="formulario">
+        <input type="text" placeholder="Email" name="uname" id="email" required>
+        <input type="password" placeholder="Senha" name="psw" id="password" required>
+
+        <button type="submit">Login</button>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    function validateLogin() {
+      // Adicione aqui a lógica de validação do login, por exemplo, enviando uma solicitação AJAX ao servidor
+      // Aqui, por simplicidade, apenas verificaremos se o email e a senha são "admin" e "password"
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      if (email === "primadagabi@gmail.com" && password === "senha") {
+        // Se a correspondência for encontrada, redirecione para outra página
+        window.location.href = "../login_botões/index.html"; // Substitua "outra_pagina.php" pelo caminho da sua outra página PHP
+        return false; // Isso evita que o formulário seja enviado
+      } else {
+        // Adicione aqui mensagens de erro ou outras ações quando o login falhar
+        alert("Login falhou. Verifique suas credenciais.");
+        return false; // Isso evita que o formulário seja enviado
+      }
+    }
+  </script>
+
+</body>
+
+</html>

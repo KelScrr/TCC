@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(Fundo-Login2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 430px;
+}
+
+h2 {
+  color: #f0c60d;
+  padding-bottom: 2px;
+  font-size: 25px;
+}
+
+input {
+  color: #f0c60d;
+}
+
+input::placeholder {
+  color: #f0c60d;
+}
+
+input[type=text],
+input[type=password] {
+  background-color: black;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 2px solid #f0c60d;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+input[type=text]:hover,
+input[type=password]:hover {
+  filter: sepia(100%);
+  transition: 0.4s;
+  transform: scale(1.04);
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: black;
+  color: #f0c60d;
+  padding: 14px 20px;
+  margin: 45px 100px;
+  border: 2px solid #f0c60d;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  filter: sepia(100%);
+  transition: 0.4s;
+  transform: scale(1.04);
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  margin: 10px 0 45px 0;
+  color: #f0c60d;
+  padding-bottom: 2px;
+  font-size: 40px;
+}
+
+.formulario {
+  color: #f0c60d;
+  width: 400px;
+  height: 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 310px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  input[type=text],
+  input[type=password] {
+    margin-left: 75px;
+    max-width: 250px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    width: 100%;
+    max-width: 310px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-left: 5%;
+  }
+
+  input[type=text],
+  input[type=password] {
+    margin-left: 75px;
+    max-width: 250px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 280px) {
+  .container {
+    width: 100%;
+    max-width: 310px;
+    padding: 10px;
+    margin-left: 120px;
+    margin-top: 120px;
+  }
+
+  input[type=text],
+  input[type=password] {
+    margin-left: 75px;
+    max-width: 250px;
+    width: 100%;
+  }
+
+}
