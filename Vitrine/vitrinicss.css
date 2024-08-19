@@ -1,0 +1,612 @@
+/* Diminuir o width da paginação ecolocar um espaçamento entre a paginação e o footer */
+/* css do header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*Cabeçalho*/
+.header {
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 50px;
+  font-weight: bold;
+}
+
+.header a,
+h1 {
+  float: left;
+  color: #f0c60d;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.lista-produtos li {
+  display: none;
+}
+
+.header a {
+  font-size: 20px;
+}
+
+.header h1.logo {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  filter: sepia(100%);
+  transition: 0.4s;
+}
+
+.header-right {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #f0c60d;
+  padding: 14px 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  max-width: 170px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #f0c60d;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.4s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 39px;
+  right: 35px;
+}
+
+.mobile-menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #f0c60d;
+}
+
+@media screen and (max-width: 920px) {
+
+  .header a,
+  h1 {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+    display: none;
+  }
+
+  .header-right.show {
+    display: block;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    background-color: transparent;
+    min-width: auto;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header h1.logo {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+}
+
+@media screen and (max-width: 280px) {
+  .header h1.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .mobile-menu-icon {
+    width: 25px;
+    display: block;
+  }
+}
+
+/*aqui havia o css da mensagem fixada, porém removi devido ao fato do site não oferecer mais uma grande rolagem na vitrini*/
+.mensagem-fixada {
+  text-align: center;
+  background-color: black;
+  /* Cor de fundo da mensagem */
+  color: #f0c60d;
+  /* Cor do texto da mensagem */
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 17px;
+  padding: 5px;
+}
+
+
+/* css do body (vitrini) */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .vitrine {
+    margin: 30px auto;
+  }
+
+  .lista-produtos {
+    justify-content: center !important;
+    /* Centralize os produtos na tela */
+    /* na hora de colocar a responsividade, os produtos não estavam centralizando
+    devido a algum conflito com algum outro codigo de css, por isso o uso do comando important força uma prioridade para esta linha do css, 
+    não encontrei o código conflitante porém desconfio que seja algum da paginação */
+  }
+
+
+}
+
+
+.vitrine {
+  display: block;
+  margin: 35px auto;
+  margin-bottom: 20px;
+  max-width: 1300px;
+  text-align: center;
+  width: 100%;
+}
+
+body {
+  background: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .item-produto {
+    width: 50%;
+    /* 2 produtos por linha em telas menores que 1500px */
+  }
+}
+
+.lista-produtos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* remover a bolinha dos produtos*/
+.lista-produtos li {
+  list-style: none;
+  /* Remove os marcadores de lista apenas dos itens da lista */
+}
+
+@media screen and (max-width: 1500px) {
+  .lista-produtos {
+    justify-content: center;
+    /* Centraliza os produtos na tela */
+  }
+
+  .item-produto {
+    width: 50%;
+    /* 2 produtos por linha em telas menores que 1500px */
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .lista-produtos {
+    justify-content: center;
+  }
+
+  .item-produto {
+    width: 75%;
+    /* 1 produto por linha em telas menores que 1300px */
+  }
+}
+
+.item-produto {
+  border: 3px solid black;
+  cursor: pointer;
+  margin: 15px 0;
+  max-width: 240px;
+  width: 25%;
+  /* 4 produtos por linha */
+  padding: 0 15px;
+  /* Espaço nas laterais */
+  transition: 0.2s;
+  /* espaço entre produtos*/
+  margin-right: 15px;
+  /* Adicione margem à direita de cada produto */
+  border-radius: 4px;
+}
+
+/* Remove a margem direita do último produto para evitar espaçamento extra */
+.item-produto:last-child {
+  margin-right: 0;
+}
+
+.link-produto {
+  color: #555;
+  text-decoration: none;
+}
+
+.info-produto {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.imagem-produto {
+  border-bottom: 1px solid #e1e1e1;
+  height: 180px;
+  width: 100% ;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-produto img {
+  max-width: 170px;
+}
+
+.descricao-produto {
+  padding: 15px;
+  color: black;
+}
+
+.titulo {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.descricao {
+  height: 60px;
+  margin: 3px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  color: black;
+}
+
+.caixa-preco {
+  align-items: center;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: black;
+  margin-left: -15px;
+  /* Valor igual à largura da borda da .item-produto */
+  /* utilizei esse comando pois não estava achando nenhuma forma
+  de estender o fundo com a cor preta, provavelmente estava entrando em conflito com algum outro código*/
+  margin-right: -15px;
+  /* Valor igual à largura da borda da .item-produto */
+}
+
+.preco {
+  display: flex;
+  align-items: center;
+}
+
+.preco del {
+  color: #ccc;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.preco ins {
+  color: #f0c60d;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.preco .info-preco {
+  color: #f0c60d;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+.item-produto:hover {
+  transform: translateY(-2px);
+  box-shadow: -2px 48px 56px -41px rgba(0, 0, 0, 0.90);
+}
+
+/* aqui havia o css da opção de comprar, removido pois o site não conta com essa opção */
+
+.d-block {
+  display: block;
+}
+
+@media (max-width: 1800px) {
+  .vitrine {
+    margin: 30px auto;
+  }
+
+  .lista-produtos {
+    justify-content: flex-start;
+  }
+
+  .item-produto {
+    width: 50%;
+    /* 2 produtos por linha */
+  }
+
+
+
+  .pagination a {
+    /* Outros estilos existentes... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adicione margem acima do bloco de paginação */
+}
+
+.pagination-link {
+  display: inline-block !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin: 0 5px !important;
+  color: #f0c60d !important;
+  text-align: center !important;
+  line-height: 30px !important;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  border: 2px solid #f0c60d !important;
+  transition: background-color 0.3s, color 0.3s !important;
+}
+
+.pagination-link:hover {
+  filter: sepia(100%);
+  transition: 0.4s;
+}
+
+.current-page {
+  background-color: #f0c60d;
+  color: black;
+}
+
+
+  /*CSS do rodapé da página*/
+}
+
+.footer {
+  margin-top: 25px; /* nova alteração (Gabi)*/
+  padding: 20px 2%;
+  background: black;
+  color: #f0c60d;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer div {
+  text-align: center;
+}
+
+.footer div h3 {
+  margin-top: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  flex-basis: 30%;
+}
+
+.col-1 p {
+  display: block;
+  text-decoration: none;
+  color: #f0c60d;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.col-2 a {
+  display: block;
+  text-decoration: none;
+  color: #f0c60d;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.col-3 {
+  font-size: 20px;
+}
+
+.col-3 a {
+  text-decoration: none;
+  color: #f0c60d;
+  font-weight: bold;
+}
+
+
+.social-icons i {
+  font-size: 20px;
+  margin: 5px;
+}
+
+a:hover {
+  filter: sepia(100%);
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 900px) {
+  .footer div {
+    flex-basis: 100%;
+    margin-left: 5px;
+  }
+
+  .footer div h3 {
+    font-size: 28px;
+  }
+
+  .col-2 a,
+  .col-1 p {
+    font-size: 18px;
+  }
+
+  .col-3 {
+    font-size: 18px;
+  }
+
+  .social-icons i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer div {
+    flex-basis: 100%;
+    margin-left: 5px;
+  }
+
+  .footer div h3 {
+    font-size: 20px;
+  }
+
+  .col-2 a,
+  .col-1 p {
+    font-size: 15px;
+  }
+
+  .col-3 {
+    font-size: 15px;
+  }
+
+  .social-icons i {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .footer div {
+    flex-basis: 100%;
+    margin-left: 2px;
+  }
+
+  .footer div h3 {
+    font-size: 18px;
+  }
+
+  .col-2 a,
+  .col-1 p {
+    font-size: 12px;
+  }
+
+  .col-3 {
+    font-size: 12px;
+  }
+
+  .social-icons i {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .footer div {
+    flex-basis: 100%;
+    margin-left: 2px;
+  }
+
+  .footer div h3 {
+    font-size: 15px;
+  }
+
+  .col-2 a,
+  .col-1 p {
+    font-size: 10px;
+  }
+
+  .col-3 {
+    font-size: 10px;
+  }
+
+  .social-icons i {
+    font-size: 10px;
+  }
+}
+
+/*Barra de rolagem*/
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f0c60d;
+  border: 4px solid black;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fdf1ba;
+}
