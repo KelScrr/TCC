@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <title>Baratão da Moda - Página Inicial</title>
+</head>
+
+<body>
+   <!--Cabeçalho-->
+   <div class="header">
+      <h1 class="logo">Baratão da Moda</h1>
+      <div class="header-right">
+         <a href="index.html">Início</a>
+         <div class="dropdown">
+            <button class="dropbtn">Produtos
+               <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+               <a href="../Vitrine/VitrineBlusa_Top.php">Blusas e Tops</a>
+               <a href="../Vitrine/VitrineVestido.php">Vestidos</a>
+               <a href="../Vitrine/VitrineCalca_Short.php">Calças e Shorts</a>
+               <a href="../Vitrine/VitrineSaias.php">Saias</a>
+               <a href="../Vitrine/VitrineConjuntos.php">Conjuntos</a>
+               <a href="../Vitrine/VitrineAcessorios.php">Acessórios</a>
+            </div>
+         </div>
+         <a href="../Sobre nós/sobre.html">Sobre nós</a>
+         <a href="../Login/index.html">Área do Proprietário</a>
+     </div>
+      <div class="mobile-menu-icon">
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+   </div>
+
+   <!--Banner-->
+   <div class="banner">
+      <div class="slide fade">
+         <img src="Banner 1.png"
+            alt="Banner 1 - Banner com o nome da loja: 'Baratão da Moda' e seu slogan 'O melhor da moda para você!'">
+      </div>
+
+      <div class="slide fade">
+         <img src="Banner 2.png"
+            alt="Banner 2 - Banner com o horário de funcionamento: De segunda á sexta das 8h ás 17:30h e de sábado das 8h ás 12h.">
+      </div>
+
+      <div class="slide fade">
+         <img src="Banner3.png"
+            alt="Banner 3 - Banner com o seguinte aviso: 'Compras apenas diretamente com o proprietário', seguido do número de telefone: (74) 8125-6582 e Instagram: @barataodamoda_ ">
+      </div>
+   </div>
+   <br>
+
+   <div style="text-align:center">
+      <span class="ponto" onclick="currentSlide(1)"></span>
+      <span class="ponto" onclick="currentSlide(2)"></span>
+      <span class="ponto" onclick="currentSlide(3)"></span>
+   </div>
+
+   <!--Categorias-->
+   <div class="titulo">
+      <h1>- Categorias - <a name="categorias"></a></h1>
+   </div>
+   <div class="container">
+      <button onclick="redirecionarPara('../Vitrine/VitrineBlusa_Top.php')" aria-label="Gerar relatório pdf">
+          <img src="icone_Blusa1.png" width="100%">
+          <span>Blusas e Tops</span>
+      </button>
+  
+      <button onclick="redirecionarPara('../Vitrine/VitrineVestido.php')" aria-label="Gerar relatório pdf">
+          <img src="Icone_Vestido1.png" width="100%">
+          <span>Vestidos</span>
+      </button>
+  
+      <button onclick="redirecionarPara('../Vitrine/VitrineCalca_Short.php')" aria-label="Gerar relatório pdf">
+          <img src="Icone_calca1.png" width="100%">
+          <span>Calças e Shorts</span>
+      </button>
+  
+      <button onclick="redirecionarPara('../Vitrine/VitrineSaias.php')" aria-label="Gerar relatório pdf">
+          <img src="Icone_saia1.png" width="100%">
+          <span>Saias</span>
+      </button>
+  
+      <button onclick="redirecionarPara('../Vitrine/VitrineConjuntos.php')" aria-label="Gerar relatório pdf">
+          <img src="Icone_conjunto1.png" width="100%">
+          <span>Conjuntos</span>
+      </button>
+  
+      <button onclick="redirecionarPara('../Vitrine/VitrineAcessorios.php')" aria-label="Gerar relatório pdf">
+          <img src="Icone_acessorio1.png" width="100%">
+          <span>Acessórios</span>
+      </button>
+  </div>
+   </div>
+   <script>
+      function redirecionarPara(pagina) {
+          window.location.href = pagina;
+      }
+  </script>
+
+   <!--Amostras-->
+   <div class="titulo2">
+      <h1>- Amostras -</h1>
+   </div>
+
+   <div class="responsive">
+      <div class="gallery">
+         <a target="_blank"
+            href="https://i.pinimg.com/236x/ab/39/e4/ab39e4efad13e9fd4a78f8c25291a980--plus-sizes-plus-size-tops.jpg">
+            <img
+               src="https://i.pinimg.com/236x/ab/39/e4/ab39e4efad13e9fd4a78f8c25291a980--plus-sizes-plus-size-tops.jpg"
+               alt="Blusa 1">
+         </a>
+         <div class="desc">Blusa 1 <br>
+            <div class="preco">R$20,00</div>
+         </div>
+      </div>
+   </div>
+   <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="https://i.pinimg.com/236x/4e/01/9f/4e019f03b1b9f641c254a657de799e02.jpg">
+            <img src="https://i.pinimg.com/236x/4e/01/9f/4e019f03b1b9f641c254a657de799e02.jpg" alt="Blusa 2">
+         </a>
+         <div class="desc">Blusa 2 <br>
+            <div class="preco">R$30,00</div>
+         </div>
+      </div>
+   </div>
+   <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="https://i.pinimg.com/474x/61/8f/0f/618f0fde59215c2e12cc248922247856.jpg">
+            <img src="https://i.pinimg.com/474x/61/8f/0f/618f0fde59215c2e12cc248922247856.jpg" alt="Blusa 3">
+         </a>
+         <div class="desc">Blusa 3 <br>
+            <div class="preco">R$25,00</div>
+         </div>
+      </div>
+   </div>
+   <div class="responsive">
+      <div class="gallery">
+         <a target="_blank" href="https://i.pinimg.com/236x/53/bb/ed/53bbedb91a725b0603b5aad46d229aea.jpg">
+            <img src="https://i.pinimg.com/236x/53/bb/ed/53bbedb91a725b0603b5aad46d229aea.jpg" alt="Blusa 4">
+         </a>
+         <div class="desc">Blusa 4 <br>
+            <div class="preco">R$40,00</div>
+         </div>
+
+      </div>
+   </div>
+   <div class="clearfix"></div>
+
+   <!--Rodapé-->
+   <div class="footer">
+      <div class="col-3">
+         <h3>Contatos</h3>
+         <div class="social-icons">
+            <a href="https://instagram.com/lojaanabella_?igshid=MzRlODBiNWFlZA==">
+               <i class="fab fa-whatsapp"></i>Instagram: @barataodamoda_</a>
+            <br>
+            <a
+               href="https://l.instagram.com/?u=http%3A%2F%2Fapi.whatsapp.com%2Fsend%3F1%3Dpt_BR%26phone%3D5574981078030&e=AT1VkjJx0ByCFni7FqalJVEbLk_uxlBKXGw0JTLvEZO2fkRvQcHlxCKkM520msiwL05FP9YZeAFycnhsZ6tdEk3gd-jb33v1EeAAMG1XxQ5yHu1u">
+               <i class="fab fa-instagram"></i>Whatsapp:(74) 98125-6582</a>
+         </div>
+      </div>
+
+      <div class="col-2">
+         <h3>Links</h3>
+         <a href="../Sobre nós/sobre.html">Sobre Nós</a>
+         <a href="../página_inicial/index.html">Produtos</a>
+         <a href="../Login/index.html">Área do Proprietário</a>
+     </div>
+     
+
+      
+
+      <div class="col-1" style="direction: ltr;">
+         <h3>Endereço</h3>
+         <p>Caldeirão Grande</p>
+         <p>Bahia</p>
+      </div>
+   </div>
+</body>
+
+<script>
+
+   /*Cabeçalho*/
+   $(document).ready(function () {
+      $(".mobile-menu-icon").click(function () {
+         $(".header-right").toggleClass("show");
+      });
+
+      $(window).resize(function () {
+         if ($(window).width() > 500) {
+            $(".header-right").removeClass("show");
+         }
+      });
+   });
+
+   /*Banner*/
+   let slideIndex = 0;
+   showSlides();
+
+   function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let pontos = document.getElementsByClassName("ponto");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < pontos.length; i++) {
+         pontos[i].className = pontos[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      pontos[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 10000);
+   }
+</script>
+
+</html>
