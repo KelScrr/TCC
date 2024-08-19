@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(Fundo-Login2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+h1 {
+    color: #f0c60d;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    color: #f0c60d;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea,
+input {
+    color: #f0c60d;
+}
+
+.price-and-parcels-container,
+.name-and-type-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-container,
+.parcels-container,
+.name-container,
+.type-container {
+    flex: 1;
+}
+
+.price-container input[type="number"],
+.parcels-container input[type="number"],
+.name-container input[type="text"],
+#product-type {
+    width: 96%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"],
+select {
+    background-color: black;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 2px solid #f0c60d;
+    color: #f0c60d;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+textarea:hover,
+input[type="file"]:hover,
+select:hover {
+    filter: sepia(100%);
+    transition: 0.4s;
+    transform: scale(1.04);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button,
+.button2 {
+    background-color: black;
+    color: #f0c60d;
+    border: 2px solid #f0c60d;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button {
+    margin-right: 70px;
+}
+
+.button2 {
+    margin-left: 70px;
+}
+
+.upload-button {
+    cursor: pointer;
+    background-color: black;
+    color: #f0c60d;
+    width: 75%;
+    padding: 12px 20px;
+    border: 2px solid #f0c60d;
+    border-radius: 10px;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.upload-button:hover,
+button:hover,
+.button2:hover {
+    filter: sepia(100%);
+    transition: 0.4s;
+    transform: scale(1.04);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.upload-icon {
+    margin-right: 10px;
+}
+
+i {
+    margin-right: 15px;
+}
+
+.image-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-preview {
+    display: none;
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+
+.file-input {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    label,
+    .type-container {
+        font-size: 18px;
+    }
+
+    select {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    .upload-button {
+        width: 100%;
+    }
+
+    .upload-icon {
+        display: none;
+    }
+
+    .button {
+        margin-right: 30px;
+    }
+
+    .button2 {
+        margin-left: 30px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    label,
+    .type-container {
+        font-size: 18px;
+    }
+
+    select {
+        font-size: 16px;
+        padding: 11px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    .upload-button {
+        width: 100%;
+    }
+
+    .upload-icon {
+        display: none;
+    }
+
+    .button {
+        margin-right: 5px;
+    }
+
+    .button2 {
+        margin-left: 5px;
+    }
+    
+}
+
+@media (max-width: 290px) {
+    .container {
+        padding: 20px;
+        max-width: 200px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    label,
+    .type-container {
+        font-size: 15px;
+    }
+
+    select {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    .upload-button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .upload-icon {
+        display: none;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .button2 {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
