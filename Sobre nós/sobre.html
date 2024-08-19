@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sobre Nós - Baratão da Moda</title>
+</head>
+
+<body>
+    <!--Cabeçalho-->
+    <div class="header">
+        <h1 class="logo">Baratão da Moda</h1>
+        <div class="header-right">
+            <a href="../página_inicial/index.html">Início</a>
+            <div class="dropdown">
+                <button class="dropbtn">Produtos
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../Vitrine/VitrineBlusa_Top.php">Blusas e Tops</a>
+                    <a href="../Vitrine/VitrineVestido.php">Vestidos</a>
+                    <a href="../Vitrine/VitrineCalca_Short.php">Calças e Shorts</a>
+                    <a href="../Vitrine/VitrineSaias.php">Saias</a>
+                    <a href="../Vitrine/VitrineConjuntos.php">Conjuntos</a>
+                    <a href="../Vitrine/VitrineAcessorios.php">Acessórios</a>
+                 </div>
+            </div>
+            <a href="../Sobre nós/sobre.html">Sobre nós</a>
+            <a href="../Login/index.html">Área do Proprietário</a>
+        </div>
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!--Sobre Nós-->
+    <div class="sobre">
+        <h1 class="titulo">Bem-vindo ao Baratão da Moda!</h1><br>
+        <h2>- Sobre Nós -</h2><br>
+        <p>
+            No Baratão da Moda, nossa história é inspirada nas mulheres incríveis que vestimos. Nossa jornada começou
+            com o
+            desejo de atender clientes cheias de personalidade, apaixonadas por expressar sua beleza e poder através da
+            moda.
+        </p><br>
+
+        <h2>- Nosso Propósito -</h2><br>
+        <p>
+            Nosso principal objetivo é unir o empreendedorismo à nossa paixão pela moda. A Baratão da Moda é muito mais
+            do
+            que uma loja; é o sonho realizado de tornar a moda acessível e empoderadora para todas as mulheres.
+        </p><br>
+
+        <h2>- O Futuro -</h2><br>
+        <p>
+            Estamos ansiosos para o futuro e temos grandes planos. Esperamos proporcionar uma experiência de compra
+            excepcional para nossos clientes e
+            queremos espalhar nossa paixão por moda por todo o país e continuar vestindo mulheres com estilo e
+            confiança.
+        </p><br>
+
+        <h3>Junte-se a nós nesta jornada e descubra o que a moda pode fazer por você na Baratão da Moda. Seja bem-vindo
+            e sinta-se em casa!</h3><br>
+    </div>
+    <!--Rodapé-->
+    <div class="footer">
+        <div class="col-3">
+            <h3>Contatos</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com/lojaanabella_?igshid=MzRlODBiNWFlZA==">
+                    <i class="fab fa-whatsapp"></i>Instagram: @barataodamoda_</a>
+                <br>
+                <a
+                    href="https://l.instagram.com/?u=http%3A%2F%2Fapi.whatsapp.com%2Fsend%3F1%3Dpt_BR%26phone%3D5574981078030&e=AT1VkjJx0ByCFni7FqalJVEbLk_uxlBKXGw0JTLvEZO2fkRvQcHlxCKkM520msiwL05FP9YZeAFycnhsZ6tdEk3gd-jb33v1EeAAMG1XxQ5yHu1u">
+                    <i class="fab fa-instagram"></i>Whatsapp:(74) 8125-6582</a>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <h3>Links</h3>
+            <a href="../Sobre nós/sobre.html">Sobre Nós</a>
+            <a href="../página_inicial/index.html">Produtos</a>
+            <a href="../Login/index.html">Área do Proprietário</a>
+        </div>
+
+        <div class="col-1" style="direction: ltr;">
+            <h3>Endereço</h3>
+            <p>Caldeirão Grande</p>
+            <p>Bahia</p>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    /*Cabeçalho*/
+    $(document).ready(function () {
+        $(".mobile-menu-icon").click(function () {
+            $(".header-right").toggleClass("show");
+        });
+
+        $(window).resize(function () {
+            if ($(window).width() > 500) {
+                $(".header-right").removeClass("show");
+            }
+        });
+    });
+
+</script>
+
+</html>
